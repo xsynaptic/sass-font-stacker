@@ -1,0 +1,74 @@
+// ==== FONT STACKER ==== //
+
+// Read more about this Sass micro-library: https://github.com/synapticism/sass-font-stacker
+
+// Set a default font stack; if you see monospaced type something probably went wrong ;)
+$k-font-stack-default: courier;
+
+// Font stack definitions
+$k-font-stacks: (
+
+  // Serif stacks
+  cambria:        (Cambria, Constantia, "URW Palladio L", "Palatino Linotype", Palatino, Georgia, "Book Antiqua", "Times New Roman", serif),
+  georgia:        (Georgia, "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", "Times New Roman", serif),
+  times:          ("Times New Roman", Times, Georgia, "DejaVu Serif", serif),
+
+  // Sans-serif stacks
+  arial:          (Arial, Helvetica, "Nimbus Sans L", sans-serif),
+  calibri:        (Calibri, "DejaVu Sans Condensed", Tahoma, "Lucida Sans", "Lucida Grande", "Bitstream Vera Sans", "Liberation Sans", Verdana, sans-serif),
+  corbel:         (Corbel, "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", sans-serif),
+  helvetica:      (Helvetica, Arial, "Nimbus Sans L", sans-serif),
+  helvetica-n:    ("Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Corbel, sans-serif), // Targets OS X
+  helvetica-nl:   ("HelveticaNeue-Light", "Helvetica-Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Corbel, sans-serif), // Targets OS X
+  tahoma:         (Tahoma, "DejaVu Sans", "Lucida Sans", "Lucida Grande", "Bitstream Vera Sans", "Liberation Sans", Verdana, sans-serif),
+  verdana:        (Verdana, Tahoma, "DejaVu Sans", sans-serif),
+
+  // Monospace stacks
+  andale:         ("Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace),
+  consolas:       (Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace),
+  courier:        ("Courier 10 Pitch", "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace),
+
+  // Chinese stacks (experimental)
+  zh-sans:        ("Heiti TC", "Heiti SC", "微軟正黑體", "Microsoft JhengHei", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", SimSun, STXihei, "华文细黑"),
+  zh-serif:       ("LiSong Pro", "新細明體", PMingLiU, STSong, STKaiti),
+
+  // Fundamentals
+  monospace:      (monospace),
+  sans-serif:     (sans-serif),
+  serif:          (serif)
+);
+
+// Font stacker function; accepts an arbitrary list font names (including none at all) ending in the name of a valid font stack from the list above
+@function k-font-stack($fonts...) {
+
+  // Assume the target stack is the last value in the arglist; break it off into a string
+  $stack: nth($fonts, -1);
+
+  // Remove the last value from the arglist to avoid duplication or create an empty list as needed
+  @if length($fonts) > 1 {
+    $fonts: set-nth($fonts, -1, null);
+  } @else {
+    $fonts: ();
+  }
+
+  // Check to see if the stack exists and return the combined list; fallback to the default if nothing else
+  @if map-has-key($k-font-stacks, $stack) {
+    @return join($fonts, map-get($k-font-stacks, $stack));
+  } @else {
+    @warn "Font stack not found: '#{$stack}'.";
+    @if map-has-key($k-font-stacks, $k-font-stack-default) {
+      @return join($fonts, map-get($k-font-stacks, $stack));
+    }
+  }
+
+  // Font stack could not be found and default could not be loaded (since we're still here); issue another warning
+  @warn "Font stacks could not be loaded.";
+
+  // Don't just sit there, do something!
+  @return monospace;
+}
+
+// A simple wrapper to output the complete font family declaration
+@mixin k-font-family($fonts...) {
+  font-family: font-stack($fonts...);
+}
