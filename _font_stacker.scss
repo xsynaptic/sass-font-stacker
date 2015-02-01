@@ -9,72 +9,70 @@ $k-font-stack-default: courier;
 $k-font-stacks: (
 
   // Serif stacks
-  baskerville:    (Baskerville, "Baskerville old face", "Hoefler Text", Garamond, "Times New Roman", serif), // **
-  big-caslon:     ("Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif), // **
-  bodini-mt:      ("Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif), // **
-  book-antiqua:   ("Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif), // **
-  calisto-mt:     ("Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif), // ***
-  cambria:        (Cambria, Constantia, "URW Palladio L", "Palatino Linotype", Palatino, Georgia, "Book Antiqua", "Times New Roman", serif),
-  cambria-b:      (Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif), // *
-  cambria-c:      (Cambria, Georgia, serif), // **
-  constantia:     (Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif), // *
-  constantia-b:   (Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif), // **
-  didot:          (Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif), // **
-  garamond:       (Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif), // **
-  georgia:        (Georgia, "Palatino Linotype", Palatino, "URW Palladio L", "Book Antiqua", "Times New Roman", serif),
-  goudy:          ("Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif), // **
-  hoefler:        ("Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif), // **
-  lucida-bright:  ("Lucida Bright", Georgia, serif), // **
-  palatino:       (Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif), // **
-  times:          (TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, "DejaVu Serif", serif),
+  baskerville:      (Baskerville, "Baskerville Old Face", Utopia, "Hoefler Text", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  big-caslon:       ("Big Caslon", "Book Antiqua", Bookman, Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "DejaVu Serif", Georgia, serif),
+  bodini-mt:        ("Bodoni MT", Didot, "Didot LT STD", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  book-antiqua:     ("Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "DejaVu Serif", Georgia, serif),
+  calisto-mt:       ("Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", "Hoefler Text", "Bitstream Charter", Charter, "DejaVu Serif", Georgia, serif),
+  cambria:          (Cambria, "Hoefler Text", Utopia, "DejaVu Serif", "Liberation Serif", Georgia, serif),
+  constantia:       (Constantia, "Lucida Bright", "Lucida Serif", Lucida, "DejaVu Serif", "Liberation Serif", Georgia, serif),
+  didot:            (Didot, "Didot LT STD", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  garamond:         (Garamond, Garamond-Normal, Baskerville, "Baskerville Old Face", Utopia, "Times New Roman", "DejaVu Serif", "Liberation Serif", serif),
+  georgia:          (Georgia, Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "Book Antiqua", "DejaVu Serif", serif),
+  goudy:            ("Goudy Old Style", "Hoefler Text", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  hoefler:          ("Hoefler Text", Baskerville, "Baskerville Old Face", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  lucida-bright:    ("Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Liberation Serif", Tinos, serif),
+  palatino:         (Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "Book Antiqua", "DejaVu Serif", Georgia, serif),
+  times:            ("Times New Roman", TimesNewRoman, "DejaVu Serif", "Liberation Serif", Tinos, Times, serif),
+
+// arial = liberation sans  nimbus sans l = helvetica
 
   // Sans-serif stacks
-  arial:          (Arial, Helvetica, "Nimbus Sans L", sans-serif),
-  calibri:        (Calibri, "DejaVu Sans Condensed", Tahoma, "Lucida Sans", "Lucida Grande", "Bitstream Vera Sans", "Liberation Sans", Verdana, sans-serif),
-  calibri-b:      (Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif), // **
-  candara:        (Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif), // **
-  corbel:         (Corbel, "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", sans-serif),
-  corbelt-b:      (Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif), // *
-  franklin:       ("Franklin Gothic Medium", Arial, sans-serif), // **
-  frutiger:       (Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif), // *
-  futura:         (Futura, "Trebuchet MS", Arial, sans-serif), // **
-  geneva:         (Geneva, Tahoma, Verdana, sans-serif), // **
-  gill-sans:      ("Gill Sans", "Gill Sans MT", Calibri, sans-serif), // **
-  helvetica:      (Helvetica, Arial, "Nimbus Sans L", sans-serif),
-  helvetica-n:    ("Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Corbel, sans-serif), // Targets OS X
-  helvetica-nl:   ("HelveticaNeue-Light", "Helvetica-Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Corbel, sans-serif), // Targets OS X
-  lucida-grande:  ("Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif), // **
-  optima:         (Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif), // **
-  segoe:          ("Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif), // *
-  segoe-b:        (Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif), // **
-  tahoma:         (Tahoma, "DejaVu Sans", "Lucida Sans", "Lucida Grande", "Bitstream Vera Sans", "Liberation Sans", Verdana, sans-serif),
-  tahoma-b:       (Tahoma, Geneva, Verdana, sans-serif), // **
-  trebuchet:      ("Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif), // **
-  verdana:        (Verdana, Tahoma, "DejaVu Sans", sans-serif),
-  verdana-b:      (Verdana, Geneva, sans-serif), // **
+  arial:            (Arial, "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
+  calibri:          (Calibri, Candara, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  candara:          (Candara, Calibri, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  century:          ("Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", Avantgarde, "DejaVu Sans", Tahoma, sans-serif),
+  corbel:           (Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  frutiger:         (Frutiger, "Frutiger Linotype", Calibri, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  futura:           (Futura, Futura-Medium, "Futura Medium", Avantgarde, "Century Gothic", "Apple Gothic", AppleGothic, "URW Gothic L", "DejaVu Sans", Tahoma, sans-serif),
+  geneva:           (Geneva, Verdana, "DejaVu Sans", sans-serif),
+  gill-sans:        ("Gill Sans", "Gill Sans MT", Calibri, "DejaVu Sans", Verdana, Geneva, sans-serif),
+  helvetica:        ("Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
+  helvetica-light:  ("Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
+  lucida-grande:    ("Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  myriad:           ("Myriad Web", "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  optima:           (Optima, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  segoe:            (Segoe, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  tahoma:           (Tahoma, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  trebuchet:        ("Trebuchet MS", Futura, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, sans-serif),
+  verdana:          (Verdana, Geneva, "DejaVu Sans", sans-serif),
+  ubuntu:           (Ubuntu, "Myriad Web", "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
 
   // Decorative stacks
-  comic-sans:     ("Comic Neue", "Comic Sans", "Comic Sans MS", cursive), // :)
-  impact:         (Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif), // *
-  papyrus:        (Papyrus, "ITC Papyrus", fantasy), // :D
+  comic-sans:       ("Comic Neue", "Comic Sans MS", "Comic Sans", Chalkboard, "ChalkboardSE-Regular", "Marker Felt", Purisa, "URW Chancery L", cursive), // http://www.mcdruid.co.uk/content/cursive-font-stack :)
+  impact:           (Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif), // *
+  papyrus:          (Papyrus, "ITC Papyrus", fantasy), // :D
 
   // Monospace stacks
-  andale:         ("Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace),
-  consolas:       (Consolas, "Bitstream Vera Sans Mono", "Andale Mono", Monaco, "DejaVu Sans Mono", "Lucida Console", monospace),
-  consolas-b:     (Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace), // *
-  courier:        ("Courier 10 Pitch", "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace),
+  andale:           ("Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
+  consolas:         (Consolas, "Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
+  courier:          ("Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
+  typewriter:       ("Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
+  ubuntu-mono:      ("Ubuntu Mono", Monaco, Consolas, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
 
   // Chinese stacks (experimental)
-  zh-sans:        ("Heiti TC", "Heiti SC", "微軟正黑體", "Microsoft JhengHei", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", SimSun, STXihei, "华文细黑"),
-  zh-serif:       ("LiSong Pro", "新細明體", PMingLiU, STSong, STKaiti),
+  zh-sans:          ("Heiti TC", "Heiti SC", "微軟正黑體", "Microsoft JhengHei", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", SimSun, STXihei, "华文细黑", sans-serif),
+  zh-serif:         ("LiSong Pro", "新細明體", PMingLiU, STSong, STKaiti, serif),
 
-  // Fundamentals
-  monospace:      (monospace),
-  sans-serif:     (sans-serif),
-  serif:          (serif)
+  // Fundamentals (for use with the stack splitter)
+  cursive:          (cursive),
+  fantasy:          (fantasy),
+  monospace:        (monospace),
+  sans-serif:       (sans-serif),
+  serif:            (serif)
 );
 
-// Font stacker function; accepts an arbitrary list font names (including none at all) ending in the name of a valid font stack from the list above
+// Font stacker function; accepts an arbitrary list of font names (including none at all); requires the name of a valid font stack from the list above as the last or only argument
 @function k-font-stack($fonts...) {
 
   // Assume the target stack is the last value in the arglist; break it off into a string
@@ -104,12 +102,16 @@ $k-font-stacks: (
   @return monospace;
 }
 
+// Return a font stack without the generic term
+@function k-font-stack-trim($stack) {
+  @if map-has-key($k-font-stacks, $stack) {
+    @return set-nth(map-get($k-font-stacks, $stack), -1, null);
+  }
+  @warn "Font stack not found: '#{$stack}'.";
+  @return ();
+}
+
 // A simple wrapper to output the complete font family declaration
 @mixin k-font-family($fonts...) {
   font-family: font-stack($fonts...);
 }
-
-// Font stack credits (where available)
-// * Michael Tuck: http://www.sitepoint.com/eight-definitive-font-stacks/
-// ** A Way Back: http://www.awayback.com/revised-font-stack/
-// *** Dan's Tools: http://www.cssfontstack.com/
