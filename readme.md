@@ -10,7 +10,7 @@ What this library *won't* do is output an `@import` declaration for web fonts. F
 
 ## Installation
 
-Download/clone this repo or install with Bower: `bower install sass-font-stacker -D`. This project has no dependencies.
+Download/clone this repo or install with Bower: `bower install sass-font-stacker -D`. This project has no dependencies. Requirements: Sass 3.3+.
 
 
 

@@ -8,7 +8,7 @@
       "homepage": "http://synapticism.com"
     }
   ],
-  "main": "_font-stacker.scss",
+  "main": "_font_stacker.scss",
   "keywords": [
     "sass",
     "scss",
