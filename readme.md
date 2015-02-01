@@ -4,6 +4,8 @@ This Sass micro-library provides a simple way to work with a pre-defined set of 
 
 What this library *won't* do is output an `@import` declaration for web fonts. For that you'll want to turn to something like [Sass Web Fonts](https://github.com/penman/Sass-Web-Fonts) but be warned: [CSS imports are an anti-pattern](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/), good for the developer and bad for performance.
 
+[Read the announcement on my blog](http://synapticism.com/a-sass-micro-library-for-web-safe-font-stacks/).
+
 
 
 ## Installation

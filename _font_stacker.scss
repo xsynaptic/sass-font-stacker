@@ -1,7 +1,5 @@
 // ==== FONT STACKER ==== //
 
-// Read more about this Sass micro-library: https://github.com/synapticism/sass-font-stacker
-
 // Set a default font stack; if you see monospaced type something probably went wrong ;)
 $k-font-stack-default: courier;
 
@@ -25,8 +23,6 @@ $k-font-stacks: (
   palatino:         (Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "Book Antiqua", "DejaVu Serif", Georgia, serif),
   times:            ("Times New Roman", TimesNewRoman, "DejaVu Serif", "Liberation Serif", Tinos, Times, serif),
 
-// arial = liberation sans  nimbus sans l = helvetica
-
   // Sans-serif stacks
   arial:            (Arial, "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
   calibri:          (Calibri, Candara, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
@@ -41,7 +37,7 @@ $k-font-stacks: (
   helvetica-light:  ("Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
   lucida-grande:    ("Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   myriad:           ("Myriad Web", "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
-  optima:           (Optima, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  optima:           (Optima, Segoe, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   segoe:            (Segoe, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   tahoma:           (Tahoma, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   trebuchet:        ("Trebuchet MS", Futura, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, sans-serif),
@@ -64,7 +60,7 @@ $k-font-stacks: (
   zh-sans:          ("Heiti TC", "Heiti SC", "微軟正黑體", "Microsoft JhengHei", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", SimSun, STXihei, "华文细黑", sans-serif),
   zh-serif:         ("LiSong Pro", "新細明體", PMingLiU, STSong, STKaiti, serif),
 
-  // Fundamentals (for use with the stack splitter)
+  // Fundamentals (for use with `k-font-stack-trim`)
   cursive:          (cursive),
   fantasy:          (fantasy),
   monospace:        (monospace),
