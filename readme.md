@@ -2,7 +2,7 @@
 
 This Sass micro-library provides a simple way to work with a pre-defined set of presumably web-safe font stacks. Two functions and a single mixin provide a bit of syntactic sugar to make it easier to prepend any of the existing fonts stacks with an arbitrary number of fonts.
 
-What this library *won't* do is output an `@import` declaration for web fonts. For that you'll want to turn to something like [Sass Web Fonts](https://github.com/penman/Sass-Web-Fonts) but be warned: [imports are an anti-pattern](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/), good for the developer and bad for performance.
+What this library *won't* do is output an `@import` declaration for web fonts. For that you'll want to turn to something like [Sass Web Fonts](https://github.com/penman/Sass-Web-Fonts) but be warned: [CSS imports are an anti-pattern](http://www.stevesouders.com/blog/2009/04/09/dont-use-import/), good for the developer and bad for performance.
 
 
 
