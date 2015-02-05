@@ -26,6 +26,7 @@ This library defines a mixin and a utility function that accept an arbitrary lis
 An example with two leading fonts:
 
 ```scss
+@import "sass-font-stacker/font-stacker";
 body {
   @include k-font-family("PT Serif", "PT Serif Pro", georgia);
 }
