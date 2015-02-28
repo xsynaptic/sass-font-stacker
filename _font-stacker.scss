@@ -53,6 +53,7 @@ $k-font-stacks: (
   andale:           ("Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   consolas:         (Consolas, "Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   courier:          ("Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
+  menlo:            (Menlo, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   typewriter:       ("Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
   ubuntu-mono:      ("Ubuntu Mono", Monaco, Consolas, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
 
