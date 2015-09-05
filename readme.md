@@ -62,7 +62,7 @@ The second utility function returns a font stack without the generic term (e.g. 
 
 ```scss
 body {
-  font-family: k-font-stack("Noto Sans", k-font-stack-trim(helvetica), k-font-stack-trim(zh-sans), sans-serif);
+  font-family: k-font-stack("Noto Sans", k-font-stack-trim(helvetica), k-font-stack-trim(zh-heiti-tc), sans-serif);
 }
 ```
 
@@ -83,6 +83,12 @@ $k-font-stacks: map-merge($k-font-stacks, (
 ```
 
 Sane pull requests are also welcome!
+
+
+
+## Chinese font stacks
+
+This package also includes Chinese character support, both traditional and simplified. For more about using these fonts check out [Kendra Schaefer's Chinese font guide](http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/), [the complete beginner's guide to Chinese fonts](http://webdesign.tutsplus.com/articles/the-complete-beginners-guide-to-chinese-fonts--cms-23444), and [Yale's Chinese font reference](http://www.yale.edu/chinesemac/pages/fonts.html). For a native Chinese approach check out [Zeno Zeng's fonts.css](https://github.com/zenozeng/fonts.css).
 
 
 

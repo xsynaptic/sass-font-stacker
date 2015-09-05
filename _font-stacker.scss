@@ -6,7 +6,8 @@ $k-font-stack-default: courier;
 // Font stack definitions
 $k-font-stacks: (
 
-  // Serif stacks
+  // == SERIF == //
+
   baskerville:      (Baskerville, "Baskerville Old Face", Utopia, "Hoefler Text", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
   big-caslon:       ("Big Caslon", "Book Antiqua", Bookman, Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "DejaVu Serif", Georgia, serif),
   bodini-mt:        ("Bodoni MT", Didot, "Didot LT STD", "Times New Roman", "DejaVu Serif", "Liberation Serif", Tinos, serif),
@@ -23,7 +24,10 @@ $k-font-stacks: (
   palatino:         (Palatino, "Palatino Linotype", "Palatino LT STD", "URW Palladio L", "Book Antiqua", "DejaVu Serif", Georgia, serif),
   times:            ("Times New Roman", TimesNewRoman, "DejaVu Serif", "Liberation Serif", Tinos, Times, serif),
 
-  // Sans-serif stacks
+
+
+  // == SANS-SERIF == //
+
   arial:            (Arial, "Helvetica Neue", Helvetica, "Nimbus Sans L", "Liberation Sans", Arimo, sans-serif),
   calibri:          (Calibri, Candara, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
   candara:          (Candara, Calibri, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
@@ -44,12 +48,18 @@ $k-font-stacks: (
   verdana:          (Verdana, Geneva, "DejaVu Sans", sans-serif),
   ubuntu:           (Ubuntu, "Myriad Web", "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
 
-  // Decorative stacks
+
+
+  // == DISPLAY == //
+
   comic-sans:       ("Comic Neue", "Comic Sans MS", "Comic Sans", Chalkboard, "ChalkboardSE-Regular", "Marker Felt", Purisa, "URW Chancery L", cursive), // http://www.mcdruid.co.uk/content/cursive-font-stack :)
   impact:           (Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif),
   papyrus:          (Papyrus, "ITC Papyrus", fantasy), // :D
 
-  // Monospace stacks
+
+
+  // == MONOSPACE == //
+
   andale:           ("Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   consolas:         (Consolas, "Andale Mono WT", "Andale Mono", Menlo, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   courier:          ("Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
@@ -57,11 +67,28 @@ $k-font-stacks: (
   typewriter:       ("Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
   ubuntu-mono:      ("Ubuntu Mono", Monaco, Consolas, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
 
-  // Chinese stacks (experimental)
-  zh-sans:          ("Heiti TC", "Heiti SC", "微軟正黑體", "Microsoft JhengHei", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", "宋体", SimSun, STXihei, "华文细黑", sans-serif),
-  zh-serif:         ("LiSong Pro", "新細明體", PMingLiU, STSong, STKaiti, serif),
 
-  // Fundamentals (for use with `k-font-stack-trim`)
+
+  // == CHINESE == //
+
+  // Songti: similar to serif; think Times New Roman
+  zh-songti-sc:   ("Songti SC", STSong, 华文宋体, 宋体, SimSun, 新宋体, NSimSun, "AR PL New Sung", "AR PL SungtiL GB", serif),
+  zh-songti-tc:   ("LiSong Pro", "Apple LiSung", 新細明體, PMingLiU, MingLiU, "AR PL Mingti2L", "TW\-Sung", serif),
+
+  // Heiti: similar to sans-serif; think Helvetica/Arial
+  zh-heiti-sc:    ("Heiti SC", "Microsoft YaHei New", "Microsoft Yahei", 微软雅黑, SimHei, 黑体, "STHeiti Light", STXihei, 华文细黑, STHeiti, 华文黑体, "WenQuanYi Zen Hei", sans-serif),
+  zh-heiti-tc:    ("Heiti TC", "Microsoft JhengHei", 微軟正黑體, sans-serif),
+
+  // Kaiti: a regular brush script
+  zh-kaiti-sc:    ("Kaiti SC", KaiTi, 楷体, STKaiti, 华文楷体, Kai, "AR PL UKai CN", serif),
+  zh-kaiti-tc:    ("BiauKai", "DFKai-SB", "AR PL KaitiM", "AR PL KaitiM GB", "AR PL UKai HK", "AR PL UKai TW", "TW\-Kai", serif),
+
+  // Fangsongti: stylized brush script; a fusion of kaiti and songti styles; only available for simplified Chinese insofar as I can tell
+  zh-fangsong-sc: (FangSong, "Fang Song", 仿宋, STFangSong, 华文仿宋, serif),
+
+  // == BASICS == //
+
+  // For use with `k-font-stack-trim`)
   cursive:          (cursive),
   fantasy:          (fantasy),
   monospace:        (monospace),
@@ -99,7 +126,7 @@ $k-font-stacks: (
   @return monospace;
 }
 
-// Return a font stack without the generic term
+// Return a font stack without the generic term; used mainly to customize fallback fonts or add CJW fonts to the stack
 @function k-font-stack-trim($stack) {
   @if map-has-key($k-font-stacks, $stack) {
     @return set-nth(map-get($k-font-stacks, $stack), -1, null);

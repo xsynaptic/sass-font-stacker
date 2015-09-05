@@ -17,7 +17,9 @@
     "fontstack",
     "fontstacks",
     "type",
-    "typography"
+    "typography",
+    "chinese",
+    "cjw"
   ],
   "license": "MIT/GPLv3",
   "ignore": [
