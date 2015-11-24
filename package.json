@@ -1,0 +1,29 @@
+{
+  "name": "sass-font-stacker",
+  "version": "0.4.0",
+  "description": "A Sass micro-library for working with pre-defined font stacks",
+  "homepage": "https://www.github.com/synapticism/sass-font-stacker",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/synapticism/sass-font-stacker.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "font",
+    "fonts",
+    "fontstack",
+    "fontstacks",
+    "type",
+    "typography",
+    "chinese",
+    "cjw",
+    "eyeglass-module"
+  ],
+  "author": "Alexander Synaptic <alexander@synapticism.com>",
+  "license": "GPL-3.0",
+  "main": "sass/_font_stacker.scss",
+  "eyeglass": {
+    "exports": "eyeglass-exports.js"
+  }
+}
