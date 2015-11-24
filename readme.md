@@ -10,7 +10,9 @@ What this library *won't* do is output an `@import` declaration for web fonts. F
 
 ## Installation
 
-Download/clone this repo or install with Bower: `bower install sass-font-stacker -D`. This project has no dependencies. Requirements: Sass 3.3+.
+Download/clone this repo or install with either npm (`npm install sass-font-stacker --save-dev`) or Bower (`bower install sass-font-stacker -D`). Then simply `@import sass-font-stacker` somewhere in your code (as long as this project is included in your load paths anyway).
+
+This project has no dependencies. Requirements: Sass 3.3+.
 
 
 
