@@ -94,6 +94,13 @@ This package also includes Chinese character support, both traditional and simpl
 
 
 
+## Resources
+
+* [Font Family Reunion](http://fontfamily.io/): compatibility tables for default system fonts.
+* [ffffallback](http://ffffallback.com/): a bookmarklet to help choose fallback fonts.
+
+
+
 ## Credits
 
 Many of these font stacks are modifications of font stacks I've collected over the years. Many of my sources are no longer online. Among those that are: [this post by Michael Tuck](http://www.sitepoint.com/eight-definitive-font-stacks/), [this post on A Way Back](http://www.awayback.com/revised-font-stack/), [this post on Mighty Meta](http://www.mightymeta.co.uk/web-safe-fonts-cheat-sheet-v-3-with-font-face-fonts-and-os-breakdown/), some tips about Futura and Century Gothic on [Intavent](http://intavant.com/), a cursory inspection of [Dan's Tools](http://www.cssfontstack.com/), and [the Wayback Machine](https://webcache.googleusercontent.com/search?q=cache:http://www.visibone.com/font/FontResults.html&gws_rd=cr&ei=CazNVMvABsT38QWgjYD4CQ).

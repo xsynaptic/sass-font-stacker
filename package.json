@@ -1,6 +1,6 @@
 {
   "name": "sass-font-stacker",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A Sass micro-library for working with pre-defined font stacks",
   "homepage": "https://www.github.com/synapticism/sass-font-stacker",
   "repository": {

@@ -69,22 +69,30 @@ $k-font-stacks: (
 
 
 
+  // == DEVELOPMENT == //
+
+  wordpress:        (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
+
+
+
   // == CHINESE == //
 
   // Songti: similar to serif; think Times New Roman
-  zh-songti-sc:   ("Songti SC", STSong, 华文宋体, 宋体, SimSun, 新宋体, NSimSun, "AR PL New Sung", "AR PL SungtiL GB", serif),
-  zh-songti-tc:   ("LiSong Pro", "Apple LiSung", 新細明體, PMingLiU, MingLiU, "AR PL Mingti2L", "TW\-Sung", serif),
+  zh-songti-sc:     ("Songti SC", STSong, 华文宋体, 宋体, SimSun, 新宋体, NSimSun, "AR PL New Sung", "AR PL SungtiL GB", serif),
+  zh-songti-tc:     ("LiSong Pro", "Apple LiSung", 新細明體, PMingLiU, MingLiU, "AR PL Mingti2L", "TW\-Sung", serif),
 
   // Heiti: similar to sans-serif; think Helvetica/Arial
-  zh-heiti-sc:    ("Heiti SC", "Microsoft YaHei New", "Microsoft Yahei", 微软雅黑, SimHei, 黑体, "STHeiti Light", STXihei, 华文细黑, STHeiti, 华文黑体, "WenQuanYi Zen Hei", sans-serif),
-  zh-heiti-tc:    ("Heiti TC", "Microsoft JhengHei", 微軟正黑體, sans-serif),
+  zh-heiti-sc:      ("Heiti SC", "Microsoft YaHei New", "Microsoft Yahei", 微软雅黑, SimHei, 黑体, "STHeiti Light", STXihei, 华文细黑, STHeiti, 华文黑体, "WenQuanYi Zen Hei", sans-serif),
+  zh-heiti-tc:      ("Heiti TC", "Microsoft JhengHei", 微軟正黑體, sans-serif),
 
   // Kaiti: a regular brush script
-  zh-kaiti-sc:    ("Kaiti SC", KaiTi, 楷体, STKaiti, 华文楷体, Kai, "AR PL UKai CN", serif),
-  zh-kaiti-tc:    ("BiauKai", "DFKai-SB", "AR PL KaitiM", "AR PL KaitiM GB", "AR PL UKai HK", "AR PL UKai TW", "TW\-Kai", serif),
+  zh-kaiti-sc:      ("Kaiti SC", KaiTi, 楷体, STKaiti, 华文楷体, Kai, "AR PL UKai CN", serif),
+  zh-kaiti-tc:      ("BiauKai", "DFKai-SB", "AR PL KaitiM", "AR PL KaitiM GB", "AR PL UKai HK", "AR PL UKai TW", "TW\-Kai", serif),
 
   // Fangsongti: stylized brush script; a fusion of kaiti and songti styles; only available for simplified Chinese insofar as I can tell
-  zh-fangsong-sc: (FangSong, "Fang Song", 仿宋, STFangSong, 华文仿宋, serif),
+  zh-fangsong-sc:   (FangSong, "Fang Song", 仿宋, STFangSong, 华文仿宋, serif),
+
+
 
   // == BASICS == //
 
@@ -111,11 +119,11 @@ $k-font-stacks: (
 
   // Check to see if the stack exists and return the combined list; fallback to the default if nothing else
   @if map-has-key($k-font-stacks, $stack) {
-    @return join($fonts, map-get($k-font-stacks, $stack));
+    @return join($fonts, map-get($k-font-stacks, $stack), comma);
   } @else {
     @warn "Font stack not found: '#{$stack}'.";
     @if map-has-key($k-font-stacks, $k-font-stack-default) {
-      @return join($fonts, map-get($k-font-stacks, $stack));
+      @return join($fonts, map-get($k-font-stacks, $stack), comma);
     }
   }
 
