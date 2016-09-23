@@ -94,10 +94,11 @@ This package also includes Chinese character support, both traditional and simpl
 
 
 
-## Resources
+## Links
 
 * [Font Family Reunion](http://fontfamily.io/): compatibility tables for default system fonts.
 * [ffffallback](http://ffffallback.com/): a bookmarklet to help choose fallback fonts.
+* [The New System Font Stack](https://bitsofco.de/the-new-system-font-stack/): a little more about where the `system-sans` stack came from in 2016.
 
 
 

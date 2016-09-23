@@ -43,6 +43,7 @@ $k-font-stacks: (
   myriad:           ("Myriad Web", "Myriad Pro", Myriad, "Gill Sans", "Gill Sans MT", "DejaVu Sans", Verdana, Geneva, sans-serif),
   optima:           (Optima, Segoe, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   segoe:            (Segoe, "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
+  system-sans:      (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
   tahoma:           (Tahoma, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, Geneva, sans-serif),
   trebuchet:        ("Trebuchet MS", Futura, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Tahoma, sans-serif),
   verdana:          (Verdana, Geneva, "DejaVu Sans", sans-serif),
@@ -66,12 +67,6 @@ $k-font-stacks: (
   menlo:            (Menlo, Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
   typewriter:       ("Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, "Courier 10 Pitch", "Liberation Mono", "Nimbus Mono L", "Cousine", monospace),
   ubuntu-mono:      ("Ubuntu Mono", Monaco, Consolas, "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace),
-
-
-
-  // == DEVELOPMENT == //
-
-  wordpress:        (-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif),
 
 
 
@@ -104,6 +99,8 @@ $k-font-stacks: (
   serif:            (serif)
 );
 
+
+
 // Font stacker function; accepts an arbitrary list of font names (including none at all); requires the name of a valid font stack from the list above as the last or only argument
 @function k-font-stack($fonts...) {
 
@@ -134,6 +131,8 @@ $k-font-stacks: (
   @return monospace;
 }
 
+
+
 // Return a font stack without the generic term; used mainly to customize fallback fonts or add CJW fonts to the stack
 @function k-font-stack-trim($stack) {
   @if map-has-key($k-font-stacks, $stack) {
@@ -142,6 +141,8 @@ $k-font-stacks: (
   @warn "Font stack not found: '#{$stack}'.";
   @return ();
 }
+
+
 
 // A simple wrapper to output the complete font family declaration
 @mixin k-font-family($fonts...) {
